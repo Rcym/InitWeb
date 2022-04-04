@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formulaire Etudiant</title>
+<style>
+    body {
+        background-color: #787878;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #d9d9d9;
+    }
+    .p_form {
+        width: 120px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        align-items: center;
+    }
+    h2 {
+      color: white;
+      font-size: 35px;
+      margin-top: 20px;
+      text-decoration: underline;
+    }
+    .element_form {
+        display: flex;
+        width: 100%;
+    }
+    input {
+        height: 20px;
+        border: 1px solid grey;
+        border-radius: 3px;
+    }
+
+    input::before {
+        content:":";
+    }
+    .btns {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    .point {
+      font-size: 20px;
+      color: white;
+      margin: 0px;
+      margin-right: 4px;
+    }
+    input[type=submit],input[type=reset] {
+        width: 9    0px;
+        height: 40px;
+        justify-content: center;
+        align-content: center;
+        color: #383838;
+        border-radius: 5px;
+        font-weight: bold
+    }
+    input[type=submit] {
+        border-bottom: 5px solid #03a700;
+    }
+    input[type=submit]:hover {
+        border-bottom: 5px solid #03a700;
+        background-color: rgb(109, 255, 96);
+        transition: all 0.15s;
+    }
+    input[type=reset] {
+        border-bottom: 5px solid rgb(182, 0, 0);
+    }
+    input[type=reset]:hover {
+        border-bottom: 5px solid rgb(182, 0, 0);
+        background-color: rgb(255, 79, 79);
+        transition: all 0.15s;
+    }
+    
+    </style>
+</head>
+
+<body>
+<h2 align="center">Saisie d'un étudiant</h2>
+<form id="formulaire" name="formulaire" methode="post" action="PAN_droit_etu.html" target="paneau_droite">
+    <div class="element_form">
+    <p class="p_form">Matricule</p>
+    <p class="point">:</p><input name="matricule" type="text" value="" size="20" maxlength="12">
+    </div>
+    <div class="element_form">
+    <p class="p_form">Nom</p>
+    <p class="point">:</p><input name="nom" type="text" value="" size="24">
+    </div>
+    
+    <div class="element_form">
+    <p class="p_form">Prénom</p>
+    <p class="point">:</p><input name="prenom" type="text" value="" size="24">
+    </div>
+    <div class="element_form">
+    <p class="p_form">Sexe</p>
+    <p class="point">:</p><input type="radio" id="Masculin" name="sexe" value="Masculain">
+        <label for="contactChoice1">Masculin</label>
+    <input type="radio" id="Feminin" name="sexe" value="Feminin">
+        <label for="contactChoice1">Feminin</label>
+    </div>
+    <div class="element_form">
+    <p class="p_form">Adresse</p>
+    <p class="point">:</p><textarea name="adresse" id="adresse" cols="45" rows="5"></textarea>
+    </div>
+    <div class="element_form">
+    <p class="p_form">Date naissance</p>
+    <p class="point">:</p><input type="date" id="date_naissance" name="date_naissance" value="yyyy-jj-mm">
+    </div>
+    <div class="element_form">
+    <p class="p_form">Code filière</p><p class="point">:</p>
+        <select name="pets" id="pet-select">
+            <option value="GTR">GTR</option>
+            <option value="ISIL">ISIL</option>
+            <option value="ACAD">ACAD</option>
+        </select>
+    </div>
+    <div class="element_form">
+    <p class="p_form">Groupe</p>
+    <p class="point">:</p><input type="number" id="groupe" name="groupe" min="1" max="4">
+    </div>
+    <div class="element_form">
+    <p class="p_form">Doublant</p>
+    <p class="point">:</p><input type="checkbox" id="doublant" name="doublant">
+    </div>
+    <div class="btns">
+    <input type="submit" value="Enregistrer">
+    <input type="reset" value="Réinitialiser">
+    </div>
+</form>
+
+</body>
+</html>

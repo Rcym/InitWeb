@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="TP4.css" type="text/css">
+<title>TP4 - Test</title>
+</head>
+
+<body>
+    <div class="TOP">
+        <h2>TP 4 - Initiation Web - JavaScript</h1>
+        <h3>Traiter les données saisies dans un formulaire a l'aide de JavaScript</h3>
+    </div>
+    <div class="container">
+        <form id="formulaire" name="formulaire" methode="get" action="TP4_result.html">
+        <h2>Informations étudiant</h2>
+        <p>donnez les informations pour identifier l'étudiant</p>
+        <div class="informations">
+            <div class="info_cont"><p>Nom :</p><input type="text" name="nom" required></div>
+            <div class="info_cont"><p>Prénom :</p><input type="text" name="prenom" required></div>
+            <div class="info_cont"><p>Matricule :</p><input type="text" name="matricule" required></div>
+        </div>
+        <h2>Bulltin des notes</h2>
+        <p>donnez les notes si dessous pour calculer la moyenne</p>
+        <table>
+            <tr>
+                <th>Unité d'enseignement</th>
+                <th class="td_module">Modules</th>
+                <th>Coefficient</th>
+                <th>crédit</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td class="Tb_left" rowspan="3">Unité Fondamentale</td>
+                <td><p class="module">Module11</p></td>
+                <td>3</td>
+                <td>4</td>
+                <td><input type="number" id="note" name="note11" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module12</p></td>
+                <td>2</td>
+                <td>2</td>
+                <td><input type="number" id="note" name="note12" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module13</p></td>
+                <td>5</td>
+                <td>4</td>
+                <td><input type="number" id="note" name="note13" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td class="Tb_left" rowspan="3">Unité Méthodologique</td>
+                <td><p class="module">Module21</p></td>
+                <td>2</td>
+                <td>3</td>
+                <td><input type="number" id="note" name="note21" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module22</p></td>
+                <td>3</td>
+                <td>2</td>
+                <td><input type="number" id="note" name="note22" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module23</p></td>
+                <td>1</td>
+                <td>2</td>
+                <td><input type="number" id="note" name="note23" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td class="Tb_left" rowspan="3">Unité Transversale</td>
+                <td><p class="module">Module31</p></td>
+                <td>2</td>
+                <td>2</td>
+                <td><input type="number" id="note" name="note31" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module32</p></td>
+                <td>2</td>
+                <td>1</td>
+                <td><input type="number" id="note" name="note32" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module33</p></td>
+                <td>1</td>
+                <td>2</td>
+                <td><input type="number" id="note" name="note33" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td class="Tb_left" rowspan="3">Unité Découverte</td>
+                <td><p class="module">Module41</p></td>
+                <td>1</td>
+                <td>1</td>
+                <td><input type="number" id="note" name="note41" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module42</p></td>
+                <td>2</td>
+                <td>1</td>
+                <td><input type="number" id="note" name="note42" min="0" max="20" required></td>
+            </tr>
+            <tr>
+                <td><p class="module">Module43</p></td>
+                <td>1</td>
+                <td>1</td>
+                <td><input type="number" id="note" name="note43" min="0" max="20" required></td>
+            </tr>
+        </table>
+        <div class="boutons">
+            <input type="submit" value="Calculer">
+            <input type="reset" value="Réinitialiser">
+        </div>
+    </div>
+    <div class="footer">
+            <p>ceci est le site du TP4 crées par OuldHammouda Racym de la section GTR L2 pour le module Initiation Web</p></div>
+        </form>
+</body>
+</html>

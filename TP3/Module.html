@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Formulaire Etudiant</title>
+<style>
+    body {
+        background-color: #787878;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #d9d9d9;
+    }
+    h2 {
+      color: white;
+      font-size: 35px;
+      margin-top: 20px;
+      text-decoration: underline;
+    }
+    .p_form {
+        width: 140px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    .element_form {
+        display: flex;
+        width: 100%;
+    }
+    input {
+        height: 20px;
+        border: 1px solid grey;
+        border-radius: 3px;
+    }
+
+    /*input::before {
+        content:":";
+        position: relative;
+        left: -10px;
+        font-size: 20px;
+        color: white;
+    }*/
+    .btns {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    .point {
+      font-size: 20px;
+      color: white;
+      margin: 0px;
+      margin-right: 4px;
+    }
+    input[type=submit],input[type=reset] {
+        width: 9    0px;
+        height: 40px;
+        justify-content: center;
+        align-content: center;
+        color: #383838;
+        border-radius: 5px;
+        font-weight: bold
+    }
+    input[type=submit] {
+        border-bottom: 5px solid #03a700;
+    }
+    input[type=submit]:hover {
+        border-bottom: 5px solid #03a700;
+        background-color: rgb(109, 255, 96);
+        transition: all 0.15s;
+    }
+    input[type=reset] {
+        border-bottom: 5px solid rgb(182, 0, 0);
+    }
+    input[type=reset]:hover {
+        border-bottom: 5px solid rgb(182, 0, 0);
+        background-color: rgb(255, 79, 79);
+        transition: all 0.15s;
+    }
+    </style>
+</head>
+
+<body>
+<h2 align="center">Saisi d'un module</h2>
+<form id="formulaire" name="formulaire" methode="post" action="PAN_droit_mod.html" target="paneau_droite">
+  <div class="element_form">
+  <p class="p_form">Code module</p>
+  <p class="point">:</p><input name="module" type="text" value="" size="8" maxlength="6">
+  </div>
+  <div class="element_form">
+  <p class="p_form">Nom module</p>
+      <p class="point">:</p><input name="nom_module" type="text" value="" size="32">
+  </div>
+  <div class="element_form">
+      <p class="p_form" align="center">Unité d'enseignement</p>
+      <p class="point">:</p><input type="radio" id="Fondamentale" name="unité" value="Fondamentale">
+      <label for="contactChoice1">Fondamentale</label>
+      <input type="radio" id="Transversale" name="unité" value="Transversale">
+      <label for="contactChoice1">Transversale</label>
+      <input type="radio" id="Méthodologique" name="unité" value="Méthodologique">
+      <label for="contactChoice1">Méthodologique</label>
+  </div>
+  <div class="element_form">
+      <p class="p_form" align="center">Nombre de cours/semaine</p>
+      <p class="point">:</p><input type="number" id="Nb_cour" name="Nb_cour" min="1" max="6">
+  </div>
+  <div class="element_form">
+    <p class="p_form">Coéfficient</p>
+    <p class="point">:</p><input type="number" id="Nb_cour" name="Nb_cour" min="1" max="6">
+  </div>
+  <div class="element_form">
+  <p class="p_form">Crédit</p>
+  <p class="point">:</p><input type="number" id="Nb_cour" name="Nb_cour" min="1" max="30">
+  </div>
+      <div class="element_form">
+        <p class="p_form">TD</p>
+        <p class="point">:</p><input type="checkbox" id="TD" name="TD">
+    </div>
+    <div class="element_form">
+        <p class="p_form">TP</p>
+        <p class="point">:</p><input type="checkbox" id="TP" name="TP">
+    </div>
+  <div class="btns">
+    <input type="submit" value="Enregistrer">
+    <input type="reset" value="Réinitialiser">
+  </div>
+</form>
+
+</body>
+</html>
